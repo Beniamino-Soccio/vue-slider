@@ -57,10 +57,20 @@ createApp({
     },
     methods: {
         nextImage: function(){
-            this.activeIndex++;
+            
+            if ( this.activeIndex === this.videogamesList.length - 1) {
+                this.activeIndex = 0;
+            }else{
+                this.activeIndex++;
+            }    
         },
         prevImage: function(){
-            this.activeIndex--;
+            
+            if ( this.activeIndex === 0){
+                this.activeIndex = this.videogamesList.length - 1
+            }else{
+                this.activeIndex--;
+            }    
         },
         
     }
