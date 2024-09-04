@@ -57,10 +57,10 @@ createApp({
     },
     methods: {
         nextImage: function(){
-
+            this.activeIndex++;
         },
         prevImage: function(){
-
+            this.activeIndex--;
         },
         
     }
