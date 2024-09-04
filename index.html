@@ -15,14 +15,18 @@
             <h1 class="text-center mt-5"> {{titleHeader}}</h1>
         </header>
 
-        <main class="container d-flex justify-content-center">
-            <div class="card text-bg-dark">
-                <img :src="videogamesList[activeIndex].image" class="card-img" alt="">
-                <div class="card-img-overlay">
-                  <h5 class="card-title">{{videogamesList[activeIndex].title}}</h5>
-                  <p class="card-text">{{videogamesList[activeIndex].text}}</p>
+        <main class="container text text-center">
+            <button class="btn btn-primary btn-lg" @click="prevImage()">Prev Image</button>
+            <button class="btn btn-success btn-lg" @click="nextImage()">Next Image</button>
+            <div class="d-flex justify-content-center">
+                <div class="card text-bg-dark">
+                    <img :src="videogamesList[activeIndex].image" class="card-img" alt="">
+                    <div class="card-img-overlay">
+                    <h5 class="card-title">{{videogamesList[activeIndex].title}}</h5>
+                    <p class="card-text">{{videogamesList[activeIndex].text}}</p>
+                    </div>
                 </div>
-              </div>
+            </div>
         </main>
 
     </div>
